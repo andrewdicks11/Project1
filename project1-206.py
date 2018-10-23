@@ -24,9 +24,10 @@ def getData(file):
 	lst_of_dict = []
 	for x in lst2:
 		d = {}
-		for idx in range(len(x)):
-			d[first_line[idx]] = x[idx]
-		lst_of_dict.append(d)
+		if len(x) > 1:
+			for idx in range(len(x)):
+				d[first_line[idx]] = x[idx]
+			lst_of_dict.append(d)
 
 	return lst_of_dict
 
